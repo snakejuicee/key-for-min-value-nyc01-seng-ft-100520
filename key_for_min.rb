@@ -7,7 +7,7 @@ def key_for_min_value(name_hash)
     return nil
   end
   
-  min = name_hash[0][0]
+  min = name_hash.default
   result = name_hash[0]
   
   name_hash.each do |key, value|
