@@ -3,12 +3,16 @@
 
 def key_for_min_value(name_hash)
   
-  min = hash.values[0]
+  if name_hash == {}
+    return nil
+  end
+  
+  result = hash.values[0]
   name_hash.each do |key, value|
-    if value < min
-      min = value
+    if value < result
+      result = value
     end
     
   end
-  hash[min]
+  hash[result]
 end
