@@ -7,15 +7,15 @@ def key_for_min_value(name_hash)
     return nil
   end
   
-  result = name_hash.values[0]
-  ans = name_hash.keys[0]
+  min = name_hash.values[0]
+  result = name_hash.keys[0]
   
   name_hash.each do |key, value|
-    if value < result
-      result = value
-      ans = key
+    if value < min
+      min = value
+      result = key
     end
   end
-  ans
+  result
 end
 
